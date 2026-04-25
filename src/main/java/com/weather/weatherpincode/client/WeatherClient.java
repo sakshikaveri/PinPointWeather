@@ -19,7 +19,7 @@ public class WeatherClient {
     public WeatherData getWeather(String pincode, double lat, double lon, LocalDate forDate) {
         try {
             // OpenWeather Current Weather API
-            // units=metric → temperature in Celsius
+            // units=metric-temperature in Celsius
             String url = "https://api.openweathermap.org/data/2.5/weather"
                     + "?lat=" + lat
                     + "&lon=" + lon
@@ -29,7 +29,7 @@ public class WeatherClient {
             String response = restTemplate.getForObject(url, String.class);
             JsonNode root = objectMapper.readTree(response);
 
-            // Parse the response fields we care about
+            // parsing the response fields
             WeatherData data = new WeatherData();
             data.setPincode(pincode);
             data.setForDate(forDate);

@@ -16,8 +16,7 @@ public class GeocodingClient {
 
     public double[] getLatLong(String pincode) {
         try {
-            // OpenWeather Geocoding API — converts pincode to lat/long
-            // "IN" = India country code
+            // openWeather Geocoding API - converts pincode to lat/long
             String url = "http://api.openweathermap.org/geo/1.0/zip"
                     + "?zip=" + pincode + ",IN"
                     + "&appid=" + apiKey;

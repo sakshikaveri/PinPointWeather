@@ -26,7 +26,6 @@ public class WeatherController {
             return ResponseEntity.ok(response);
 
         } catch (RuntimeException e) {
-            // Return a clean error message instead of a stack trace
             return ResponseEntity.badRequest()
                     .body(Map.of("error", e.getMessage()));
         }

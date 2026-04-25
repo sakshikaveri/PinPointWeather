@@ -11,7 +11,7 @@ public class PincodeLocation {
 
     @Id
     @Column(name = "pincode", length = 10)
-    private String pincode;  // e.g. "411014" — this IS the primary key
+    private String pincode;  //primary key
 
     @Column(name = "latitude", nullable = false)
     private double latitude;
@@ -20,7 +20,7 @@ public class PincodeLocation {
     private double longitude;
 
     @Column(name = "city_name")
-    private String cityName;  // nice to store for display
+    private String cityName;
 
     public String getPincode() {
         return pincode;

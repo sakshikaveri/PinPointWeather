@@ -8,8 +8,7 @@ import java.time.LocalDate;
 @Entity
 @Table(name = "weather_data",
         uniqueConstraints = @UniqueConstraint(columnNames = {"pincode", "for_date"}))
-// ↑ ensures we never save duplicate rows for same pincode+date
-
+// not saving duplicate rows for same pincode
 public class WeatherData {
 
     @Id
