@@ -1,3 +1,7 @@
+/**
+ * Just a simple class to structure what we send back to the user. We don't send the DB entity directly — we copy values into this DTO (Data Transfer Object) and send it.
+ **/
+
 package com.weather.weatherpincode.dto;
 
 import lombok.Data;
@@ -13,6 +17,7 @@ public class WeatherResponse {
     private Integer humidity;
     private String description;
     private Double windSpeed;
+    private String cityName;
 
     public Double getWindSpeed() {
         return windSpeed;
@@ -84,5 +89,13 @@ public class WeatherResponse {
 
     public void setPincode(String pincode) {
         this.pincode = pincode;
+    }
+
+    public String getCityName() {
+        return cityName;
+    }
+
+    public void setCityName(String cityName) {
+        this.cityName = cityName;
     }
 }

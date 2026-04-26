@@ -1,3 +1,5 @@
+/** maps to the pincode_location table in MySQL **/
+
 package com.weather.weatherpincode.model;
 
 import jakarta.persistence.*;

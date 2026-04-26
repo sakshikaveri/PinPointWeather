@@ -1,3 +1,6 @@
+/** A helper that talks to OpenWeather's Weather API. You give it lat/long, it gives back temperature, humidity, wind speed, description etc.
+ *  Internally it uses RestTemplate to make the HTTP call and ObjectMapper to parse the JSON response. **/
+
 package com.weather.weatherpincode.client;
 
 import com.weather.weatherpincode.model.WeatherData;

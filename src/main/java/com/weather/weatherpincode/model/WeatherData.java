@@ -1,3 +1,4 @@
+/** Maps to weather_data table **/
 package com.weather.weatherpincode.model;
 
 import jakarta.persistence.*;

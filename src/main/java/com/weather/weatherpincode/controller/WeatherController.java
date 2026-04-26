@@ -1,3 +1,7 @@
+/***
+ * receives the HTTP request, checks that pincode and date are provided, calls the service, and returns the response
+ * ***/
+
 package com.weather.weatherpincode.controller;
 
 import com.weather.weatherpincode.dto.WeatherResponse;
@@ -19,10 +23,11 @@ public class WeatherController {
     @GetMapping
     public ResponseEntity<?> getWeather(
             @RequestParam String pincode,
+            @RequestParam(required = false, defaultValue = "IN") String country,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate forDate) {
 
         try {
-            WeatherResponse response = weatherService.getWeather(pincode, forDate);
+            WeatherResponse response = weatherService.getWeather(pincode, country, forDate);
             return ResponseEntity.ok(response);
 
         } catch (RuntimeException e) {
