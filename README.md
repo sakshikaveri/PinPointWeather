@@ -6,19 +6,19 @@ Implements smart caching — repeated requests for the same pincode/date are ser
 
 ## Tech Stack
 - Java 17, Spring Boot 3.2
-- Spring Data JPA + MySQL
+- Spring Data JPA + Postgresql
 - OpenWeather Geocoding API + Current Weather API
 
 ## Setup
 
 ### Prerequisites
 - Java 17+
-- MySQL running locally
+- Postgresql running locally
 - Free API key from openweathermap.org
 
 ### Steps
-1. Create database: `CREATE DATABASE weather_pincode;`
-2. Update `application.properties` with your MySQL credentials and API key
+1. Create database: `CREATE DATABASE weatherinfo;`
+2. Update `application.properties` with your Postgresql credentials and API key
 3. Run: `mvn spring-boot:run`
 
 ## API
